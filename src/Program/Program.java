@@ -16,7 +16,7 @@ public class Program extends UserInputAndHandling {
         plantsList.add(new Carnivore("Meatloaf", 0.7));
         plantsList.add(new Palm("Putte", 1.0));
 
-        test(plantsList);
+        askAndCalculate(plantsList);
     }
 
 }

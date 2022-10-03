@@ -7,7 +7,6 @@ import java.util.NoSuchElementException;
 public class UserInputAndHandling {
 
     public String askForPlant() {
-
         return JOptionPane.showInputDialog(null, "Vilken växt vill du vattna");
     }
     public Plant handleAnswer(String answer, List<Plant> plantList) {
@@ -18,19 +17,18 @@ public class UserInputAndHandling {
         }
         throw new NoSuchElementException();
     }
-    public void test(List<Plant>plantList){
+    public void askAndCalculate(List<Plant>plantList){
         while(true){
             String input = askForPlant();
             try{
                 Plant plant = handleAnswer(input, plantList);
-                JOptionPane.showMessageDialog(null,"Finns");
                 plant.calculateNutrition();
                 break;
             }catch(NoSuchElementException e){
-                JOptionPane.showMessageDialog(null, "Finns ej i listan");
+                JOptionPane.showMessageDialog(null, "Skriv in ett giltigt namn");
             }catch(NullPointerException e){
-                JOptionPane.showMessageDialog(null, "glömde du input?");
+                System.exit(0);
             }
         }
     }
-}//TestGithub
+}
