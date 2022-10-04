@@ -1,6 +1,6 @@
 package GreenestOOP;
 /*abstract superklass då vi inte instansierar objekt här
-* implementerat interface*/
+* implementerar interface*/
 public abstract class Plant implements PlantInterface{
     //protected då vi vill nå dessa instansvariabler från subklasser.
     protected String type; //Enum
@@ -11,12 +11,9 @@ public abstract class Plant implements PlantInterface{
         this.name = name;
         this.height = height;
     }
-
     public String getName() {
         return name;
     }
-    //Från interface
-    @Override
-    public void calculateNutrition() {
+    public void calculateNutrition(){
     }
 }

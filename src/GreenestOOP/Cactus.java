@@ -3,7 +3,6 @@ import javax.swing.*;
 
 public class Cactus extends Plant{ //ärver från plant
 
-
     public Cactus(String name, double height) {
         super(name, height);
         this.nutrition = Nutrition.CACTUS.value;

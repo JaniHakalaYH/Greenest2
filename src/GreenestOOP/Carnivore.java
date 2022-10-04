@@ -1,7 +1,7 @@
 package GreenestOOP;
 import javax.swing.*;
 
-public class Carnivore extends Plant{
+public class Carnivore extends Plant{ //ärver från plant
 
     private final double baseNutrition; //används endast här och är konstant
     public Carnivore(String name, double height) {
@@ -12,6 +12,6 @@ public class Carnivore extends Plant{
     }
     @Override //Från interface och är även exempel på polymorfism
     public void calculateNutrition() {
-        JOptionPane.showMessageDialog(null, "Karnivoren "+this.name+" behöver "+ this.baseNutrition+this.nutrition*this.height+" liter "+this.type+" per dag");
+        JOptionPane.showMessageDialog(null, "Karnivoren "+this.name+" behöver "+ (this.baseNutrition+this.nutrition*this.height)+" liter "+this.type+" per dag");
     }
 }
